@@ -1,0 +1,79 @@
+.footer {
+  background: var(--charcoal);
+  color: #ccc;
+  margin-top: 5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3.5rem 1.5rem;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.footer-disclaimer {
+  font-size: 0.78rem !important;
+  color: #f0a500;
+  border-left: 3px solid #f0a500;
+  padding-left: 0.75rem;
+}
+
+.footer-col h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 1rem;
+}
+
+.footer-col a {
+  display: block;
+  color: #bbb;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 1.25rem 1.5rem;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

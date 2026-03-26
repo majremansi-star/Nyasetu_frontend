@@ -1,0 +1,26 @@
+.font-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.font-controls button {
+  background: none;
+  border: 1.5px solid var(--border);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--charcoal);
+  border-radius: 2px;
+  transition: all 0.2s;
+  font-size: 0.8rem;
+}
+
+.font-controls button:hover {
+  background: var(--light-sage);
+  border-color: var(--sage);
+}
+
+.font-controls button span {
+  font-size: 0.65rem;
+}

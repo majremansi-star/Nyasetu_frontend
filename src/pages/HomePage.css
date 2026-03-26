@@ -1,0 +1,237 @@
+.home {}
+
+/* Hero */
+.hero {
+  background: var(--deep-green);
+  color: white;
+  padding: 6rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(82,183,136,0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(181,132,11,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 50px;
+  padding: 0.35rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.88;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Stats */
+.stats-bar {
+  background: var(--charcoal);
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 1rem;
+  border-right: 1px solid #333;
+}
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--amber);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+/* Features */
+.features-section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  margin-bottom: 2.5rem;
+  color: var(--charcoal);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  color: var(--charcoal);
+  transition: all 0.2s;
+}
+
+.feature-card:hover {
+  border-color: var(--sage);
+  box-shadow: 0 8px 32px var(--shadow);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  font-size: 0.875rem;
+  color: #666;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.feature-link {
+  font-size: 0.85rem;
+  color: var(--sage);
+  font-weight: 600;
+  margin-top: auto;
+}
+
+/* Helplines */
+.helplines-section {
+  padding: 4rem 0;
+  background: var(--light-sage);
+}
+
+.helplines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.helpline-card {
+  background: white;
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  color: var(--charcoal);
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.helpline-card:hover {
+  border-color: var(--deep-green);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.helpline-emoji {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.helpline-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.helpline-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--deep-green);
+  font-weight: 700;
+}
+
+.helpline-detail {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* CTA */
+.cta-section {
+  padding: 5rem 0;
+  background: var(--warm-white);
+}
+
+.cta-inner {
+  max-width: 700px;
+  text-align: center;
+}
+
+.cta-inner h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+  color: var(--deep-green);
+}
+
+.cta-inner p {
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .helplines-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .helplines-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}

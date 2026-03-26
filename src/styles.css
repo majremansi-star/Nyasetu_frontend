@@ -1,0 +1,149 @@
+:root {
+  --cream: #faf7f2;
+  --warm-white: #fffef9;
+  --charcoal: #1a1a1a;
+  --deep-green: #1b4332;
+  --forest: #2d6a4f;
+  --sage: #52b788;
+  --gold: #b5840b;
+  --amber: #e9a817;
+  --rust: #c0392b;
+  --light-sage: #d8f3dc;
+  --border: #e2ddd5;
+  --shadow: rgba(27, 67, 50, 0.12);
+  --font-base: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--deep-green);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--forest);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--deep-green);
+  border: 2px solid var(--deep-green);
+}
+.btn-outline:hover {
+  background: var(--deep-green);
+  color: white;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: white;
+}
+.btn-gold:hover {
+  background: var(--amber);
+  transform: translateY(-1px);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.75rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 32px var(--shadow);
+  transform: translateY(-2px);
+}
+
+.page-hero {
+  background: var(--deep-green);
+  color: white;
+  padding: 5rem 0 4rem;
+  text-align: center;
+}
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+.page-hero p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+  .card { padding: 1.5rem; }
+}
